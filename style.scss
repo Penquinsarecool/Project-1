@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,300;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
+
+$newsreader: "Newsreader", serif;
+$opensans: "Open Sans", sans-serif;
+$montserrat: "Montserrat", sans-serif;
+$base-color: #fafafa ;
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 1rem/1.25rem $opensans;
+//  color: $base-color;
+//	background-color: #8892EE;
+	
+}
+
+.container {
+  width: 93%;
+  max-width: 83.75rem;
+  margin: 0 auto;
+
+}
+.blocks {
+min-height: 30%;
+	width: 56%;
+	padding: 0 2%;
+
+	}
+
+.clear, .list {
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+    align-items: center;
+	img {
+		width: 40%;
+//		height: 15%;
+	}
+	.snow {
+		width: 80%;
+		display: flex;
+		flex-wrap: wrap;
+    justify-content: space-around;
+		.text
+		{
+    padding-left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+}
+		div {
+			display: none;
+    align-items: center;
+    padding: 2%;
+		}
+		img {
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+		}
+}
+}
+.list {
+	justify-content: center;
+	align-items: center;
+	h2 {
+		padding-right: 2%;
+	}
+}
+// Navigation
+.nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+.opacity{
+background-color: rgba(66, 66, 66, 0.5); 
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+	img {
+		width: 50%;
+	}
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.choose, .nav > .nav-links > a {
+	font-family: $montserrat;
+	font-size: 14px;
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+	
+}
+
+// ClassWork
+
+#hero {
+	background-image: url("../images/pexels-pixabay-236698.jpg");
+	height: 568px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-wrap: wrap;
+	.button{
+		display: flex;
+		img {
+			width:5%;
+		}
+	}
+}// Scss Document
+
+.cont {
+    display: flex;
+	flex-direction: column;
+    background-color: #000;
+    color: #fff;
+    opacity: 70%;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+	.textbox {
+		width: 40%;
+	}
+	a {
+		background-color: #6638F0;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    min-width: 8.6875rem;
+		padding: 2%;
+	}
+}
+
+.choose {
+	display: flex;
+	    justify-content: space-around;
+	text-align: center;
+		a {
+		background-color: #6638F0;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    min-width: 8.6875rem;
+		padding: 1%;
+	}
+	flex-direction: column;
+}
+
+.desktop {
+	display: none;
+}
+
+footer {
+background-color: rgba(66, 66, 66, 0.7); 
+	width: 100%;
+	margin: 0;
+	padding: 2%;
+	color: $base-color;
+	.copyright {
+		display: flex;
+		justify-content: space-evenly;
+	}
+}
+@media (min-width:900px){
+	.cont {
+		height: 91%;
+		width: 50%;
+	}
+	.clear {
+		.snow{
+			div {
+				display: flex;
+			}
+		}
+	}
+	.desktop { 
+		display: block;}
+	
+		.choose {
+			flex-direction: row;
+		
+	}
+}
+@media (max-width:1180px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #363636;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+	  color: white;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
